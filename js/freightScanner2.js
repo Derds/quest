@@ -1,9 +1,11 @@
-function scan(inputArr){
-    var findContraband = []
-    inputArr.forEach(element => {
-        if (element === 'contraband') {
-            findContraband.add(element.id);
-        }
+function scan(freightItems) {
+    let contrabandIndexes = [];
+  
+    freightItems.forEach((el, idx) => {
+      if (el == 'contraband') {
+        contrabandIndexes.push(idx);
+      }
     });
-    return findContraband;
-}
+    return contrabandIndexes;
+  }
+  
